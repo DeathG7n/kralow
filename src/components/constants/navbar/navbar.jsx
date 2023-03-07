@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container } from './navbarStyles'
 export default function Navbar() {
+    const [nav, setNav] = useState(false)
   return (
     <Container>
         <div className="container">
@@ -21,19 +22,19 @@ export default function Navbar() {
             <div className="btn"> 
                 <a href="#feedback"> Contact Us </a>
             </div>
-            <div className="hamburger">
+            <div className="hamburger" onClick={()=> setNav(true)}>
                 <span></span>
 				<span></span>
 				<span></span>
             </div>
         </div>
-        <div className='sm-nav'>
-                <div className='close'>
+        <div className='sm-nav' style={{display: nav ? "flex" : "none"}}>
+                <div className='close' onClick={()=> setNav(false)}>
                     <div></div>
                     <div></div>
                 </div>
                 <div>
-                    <ul>
+                    <ul onClick={()=> setNav(false)}>
                         <li><a href="#about">About</a></li>
                         <li><a href="#objectives">Objectives</a></li>
                         <li><a href="#whom">Audience</a></li>

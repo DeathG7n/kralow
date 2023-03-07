@@ -147,21 +147,26 @@ export const Container = styled.div`
                     width: 50px;
                     height: 50px;
                     cursor: pointer;
-                    border: 1px solid;
                     position: absolute;
                     right: 30px;
                     top: 30px;
         
                     div{
-                        width: 20px;
+                        width: 50px;
                         height: 1px;
                         border-radius: 5px;
                         background-color: #fff;
                         border: 1px solid #fff;
+                        position: relative;
+                    }
 
-                        // :first-child{
-                        //     translate
-                        // }
+                    div:first-child{
+                        transform: rotate(45deg);
+                        translate: -10px 20px;
+                    }
+                    div:last-child{
+                        transform: rotate(-45deg);
+                        translate: -10px 18px;
                     }
             }
         }
