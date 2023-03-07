@@ -5,6 +5,10 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 900px){
+        flex-direction: column;
+    }
 }
 
 #whom div{
@@ -14,15 +18,27 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+
+    @media screen and (max-width: 900px){
+        width: 90%;
+    }
 }
 
 #whom div h1{
     font-size: 50px;
+    @media screen and (max-width: 900px){
+        text-align: center;
+    }
 }
 
 #whom div p{
     font-size: 20px;
     padding-right: 80px;
+
+    @media screen and (max-width: 900px){
+        padding: 20px;
+        text-align: center;
+    }
 }
 
 #whom div> img{
@@ -44,6 +60,10 @@ export const Container = styled.div`
     a{
         text-decoration: none;
         color: #000;
+    }
+
+    @media screen and (max-width: 900px){
+        align-self: center;
     }
 }
 `

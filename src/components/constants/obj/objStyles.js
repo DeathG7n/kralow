@@ -9,6 +9,12 @@ export const Container = styled.div`
             text-align: center;
             font-size: 50px;
             margin: 100px 0;
+
+            @media screen and (max-width: 900px){
+                font-size: 40px;
+                padding: 0 20px;
+                text-align: center;
+            }
         }
     }
 
@@ -17,6 +23,10 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     gap: 40px;
+
+    @media screen and (max-width: 900px){
+        flex-direction: column;
+    }
 }
 
 .obj .box{
@@ -27,6 +37,12 @@ export const Container = styled.div`
     border-radius: 10px;
     color: #fff;
     position: relative;
+
+    @media screen and (max-width: 900px){
+        width: 90%;
+        height: 120px;
+        flex-direction: column;
+    }
 }
 
 .text{
@@ -35,9 +51,19 @@ export const Container = styled.div`
     align-items: center;
     font-size: 20px;
     padding: 0 30px;
+
+    @media screen and (max-width: 900px){
+        font-size: 16px;
+        padding: 0 10px;
+    }
 }
 .box-img img{
     position: relative;
     transform: translateY(-40px);
+
+    @media screen and (max-width: 900px){
+        width: 150px;
+        transform: translateY(0);
+    }
 }
 `
