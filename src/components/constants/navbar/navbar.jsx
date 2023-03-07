@@ -42,7 +42,7 @@ export default function Navbar() {
                         <li><a href="#founders">Founders</a></li>
                     </ul>
                 </div>
-                <div className="btn"> 
+                <div className="btn" onClick={()=> setNav(false)}> 
                     <a href="#feedback"> Contact Us </a>
                 </div>
             </div>
