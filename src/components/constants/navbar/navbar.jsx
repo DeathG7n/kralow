@@ -10,7 +10,7 @@ export default function Navbar() {
                 </a>
             </div>
             <div>
-                <ul>
+                <ul className='nav'>
                     <li><a href="#about">About</a></li>
                     <li><a href="#objectives">Objectives</a></li>
                     <li><a href="#whom">Audience</a></li>
@@ -27,6 +27,24 @@ export default function Navbar() {
 				<span></span>
             </div>
         </div>
+        <div className='sm-nav'>
+                <div className='close'>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#objectives">Objectives</a></li>
+                        <li><a href="#whom">Audience</a></li>
+                        <li><a href="#work">How it works</a></li>
+                        <li><a href="#founders">Founders</a></li>
+                    </ul>
+                </div>
+                <div className="btn"> 
+                    <a href="#feedback"> Contact Us </a>
+                </div>
+            </div>
     </Container>
   )
 }

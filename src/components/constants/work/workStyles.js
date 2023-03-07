@@ -29,6 +29,11 @@ export const Container = styled.div`
 #work h1{
     font-size: 50px;
     margin: 50px 0 0 0 ;
+
+    @media screen and (max-width: 900px){
+        font-size: 40px;
+        text-align: center;
+    }
 }
 
 #work h2{
@@ -37,16 +42,46 @@ export const Container = styled.div`
     font-weight: 400;
     padding: 0 280px;
     text-align: center;
+
+
+    @media screen and (max-width: 900px){
+        font-size: 16px;
+        padding: 0 20px;
+    }
 }
 
 #work p{
     font-size: 20px;
+
+    @media screen and (max-width: 900px){
+        font-size: 18px;   
+    }
 }
 .work{
     display: flex;
     justify-content: center;
     gap: 40px;
     margin: 40px 0;
+    position: relative;
+
+    @media screen and (max-width: 900px){
+        gap: 10px;
+        justify-content: flex-start;
+        padding: 0 10px;
+    }
+
+    .sm-work{
+        display: none;
+        width: 90%;
+        p:nth-child(odd){
+            color: goldenrod;
+            text-align: right;
+        }
+
+        @media screen and (max-width: 900px){
+            display: block;
+        }
+    }
 }
 
 .work div:first-child{
@@ -54,10 +89,19 @@ export const Container = styled.div`
     width: 30%;
     color: goldenrod;
     padding-left: 30px;
+    
+    @media screen and (max-width: 900px){
+        display: none;
+    }
+
 }
-.work div:last-child{
+.work .box{
     text-align: left;
     width: 50%;
+
+    @media screen and (max-width: 900px){
+        display: none;
+    }
 }
 
 .work span{
@@ -65,6 +109,10 @@ export const Container = styled.div`
     border-radius: 1px;
     border: 1px solid #fff;
     height: 370px;
+
+    @media screen and (max-width: 900px){
+        height: 700px;
+    }
 }
 
 `

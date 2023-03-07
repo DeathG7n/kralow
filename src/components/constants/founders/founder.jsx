@@ -8,7 +8,7 @@ export default function Founder() {
     <Container>
     <div id="founders">
 				<h1>Meet the founders</h1>
-				<div class="card">
+				<div className="card">
 					<img src={Thomas} alt="thomas" />
 					<div>
 						<h2>Thomas Kralow</h2>
@@ -17,7 +17,7 @@ export default function Founder() {
 						<p><span></span>World renowned trading/investing coach</p>
 					</div>
 				</div>
-				<div class="card card1">
+				<div className="card card1">
 					<div>
 						<h2>Alessandro Rocco Pietrocola</h2>
 						<p>Managing Director<span></span></p>
@@ -26,7 +26,7 @@ export default function Founder() {
 					</div>
 					<img src={Aless} alt="aless" />
 				</div>
-				<span class="note">We have joined forces to make crypto investing accessible, safe and profitable for all!</span>
+				<span className="note">We have joined forces to make crypto investing accessible, safe and profitable for all!</span>
 			</div>
     </Container>
   )

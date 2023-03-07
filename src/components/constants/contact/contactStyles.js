@@ -9,6 +9,10 @@ export const Container = styled.div`
     #feedback{
         width: 45%;
 
+        @media screen and (max-width: 900px){
+            width: 90%;
+        }
+
         form{
             display: flex;
             flex-direction: column;
@@ -20,6 +24,11 @@ export const Container = styled.div`
             h1{
                 font-size: 50px;
                 margin-bottom: 0px;
+
+                @media screen and (max-width: 900px){
+                    font-size: 40px;
+                    text-align: center;
+                }
             }
             p{
                 font-size: 24px;
@@ -35,9 +44,17 @@ export const Container = styled.div`
                 background-color: #000;
 
                 div{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     width: fit-content;
                     padding: 10px 30px;
                     border-radius: 20px;
+
+                    @media screen and (max-width: 900px){
+                        font-size: 13px;
+                        padding: 10px 20px;
+                    }
                 }
             }
 
@@ -45,7 +62,13 @@ export const Container = styled.div`
                 width: 90%;
                 display: flex;
                 flex-direction: column;
-                gap: 30px;
+                align-items: center;
+                gap: 35px;
+                margin: 10px 0;
+
+                @media screen and (max-width: 900px){
+                    width: 98%;
+                }
 
                 input, select{
                     height: 50px;
@@ -57,18 +80,43 @@ export const Container = styled.div`
                     transition: all .2s linear;
                     color: #fff;
                     font-weight: 400;
+                    width: 100%;
+
+                    @media screen and (max-width: 900px){
+                        font-size: 14px;
+                    }
                     
 
                     ::placeholder{
                         font-size: 19px;
                         color: #fff;
                         font-weight: 400;
+
+                        @media screen and (max-width: 900px){
+                            font-size: 14px;
+                        }
                     }
 
                     :focus{
                         text-indent: 20px;
                         border: 1px solid #fff;
                         border-radius: 5px;
+                    }
+                }
+
+                .btns{
+
+                    @media screen and (max-width: 900px){
+                        gap: 5px;
+                    }
+
+                    div{
+    
+                        @media screen and (max-width: 900px){
+                            font-size: 13px;
+                            padding: 10px 0;
+                            width: 140px;
+                        }
                     }
                 }
             }
@@ -99,6 +147,15 @@ export const Container = styled.div`
                     height:25px;
                     border-radius: 100%;
                     accent-color: goldenrod;
+
+                    @media screen and (max-width: 900px){
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+
+                @media screen and (max-width: 900px){
+                    font-size: 13px;
                 }
             }
         }

@@ -9,4 +9,9 @@ export const Container = styled.div`
     p{
         margin: 5px;
     }
+
+    @media screen and (max-width: 900px){
+        font-size: 14px;
+        text-align: center;
+    }
 `

@@ -39,8 +39,8 @@ export const Container = styled.div`
     position: relative;
 
     @media screen and (max-width: 900px){
-        width: 90%;
-        height: 120px;
+        width: 50%;
+        height: auto;
         flex-direction: column;
     }
 }
@@ -55,6 +55,7 @@ export const Container = styled.div`
     @media screen and (max-width: 900px){
         font-size: 16px;
         padding: 0 10px;
+        margin-top: -50px;
     }
 }
 .box-img img{
@@ -63,7 +64,7 @@ export const Container = styled.div`
 
     @media screen and (max-width: 900px){
         width: 150px;
-        transform: translateY(0);
+        transform: translateY(-30px);
     }
 }
 `
