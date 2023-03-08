@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import {Container, ErrorText} from './contactStyles'
 import { useFormik } from 'formik';
 import { validationSchema } from "../../constants/validationSchema";
 import {countries} from '../countries'
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
     const [type, setType] = useState('investor')
     const [status, setStatus] = useState('accredited')
+    const form = useRef()
 
     function handleType(item){
         setType(item)
@@ -29,11 +31,23 @@ export default function Contact() {
         }
     });
 
+    const sendEmail = async(e) => {
+        e.preventDefault();
+    
+        await emailjs.sendForm('service_5e8x3bq', 'template_g36t1nt', form.current, 'FujH57pnokLdaPoI1')
+          .then((result) => {
+              console.log(result.text);
+              console.log("message successful")
+          }, (error) => {
+              console.log(error.text);
+          });
+    };
+
     console.log(values)
   return (
     <Container>
         <div id="feedback">
-				<form onSubmit={handleSubmit}>
+				<form onSubmit={sendEmail} ref={form}>
 					<h1>Register interest</h1>
 					<p>I am:</p>
 					<div className="btns">
