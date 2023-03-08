@@ -212,4 +212,8 @@ export const ErrorText = styled.span`
     font-size: 18px;
     align-self: flex-start;
     margin-bottom: 5px;
+
+    @media screen and (max-width: 900px){
+        font-size: 14px;
+    }
 `
