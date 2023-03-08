@@ -63,7 +63,6 @@ export const Container = styled.div`
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 35px;
                 margin: 10px 0;
 
                 @media screen and (max-width: 900px){
@@ -81,6 +80,11 @@ export const Container = styled.div`
                     color: #fff;
                     font-weight: 400;
                     width: 100%;
+                    margin: 5px 0 10px 0;
+
+                    option{
+                        color: #000;
+                    }
 
                     @media screen and (max-width: 900px){
                         font-size: 14px;
@@ -103,6 +107,17 @@ export const Container = styled.div`
                         border-radius: 5px;
                     }
                 }
+                /* Chrome, Safari, Edge, Opera */
+                    input::-webkit-outer-spin-button,
+                    input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                    }
+
+                    /* Firefox */
+                    input[type=number] {
+                    -moz-appearance: textfield;
+                    }
 
                 .btns{
 
@@ -118,6 +133,35 @@ export const Container = styled.div`
                             width: 140px;
                         }
                     }
+                }
+            }
+            .file{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 30px;
+
+
+                input{
+                    display: none;
+                }
+                label{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: fit-content;
+                    padding: 10px 30px;
+                    border-radius: 20px;
+                    background-color: #fdeab9;
+                    color: #000;
+
+                    @media screen and (max-width: 900px){
+                        font-size: 13px;
+                        padding: 10px 20px;
+                    }
+                }
+                p{
+                    font-size: 12px;
                 }
             }
             .btn{
@@ -161,4 +205,11 @@ export const Container = styled.div`
         }
         
     }
+`
+
+export const ErrorText = styled.span`
+    color: red;
+    font-size: 18px;
+    align-self: flex-start;
+    margin-bottom: 5px;
 `
