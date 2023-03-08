@@ -12,8 +12,6 @@ export const validationSchema = Yup.object().shape({
   // amount: Yup.number().required("Phone number is a required field"),
   // confirmPhone: Yup.number()
   //   .oneOf([Yup.ref('phone'), null], 'Phone number must match'),
-  agreePrivacy: Yup.string().required("Check the box above"),
-  agreeTerms: Yup.string().required("Check the box above"),
 
 });
  

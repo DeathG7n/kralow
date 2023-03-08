@@ -8,20 +8,20 @@ export default function Obj() {
     <Container>
         <div id="objectives">
 				<h1>Our two main objectives</h1>
-				<div class="obj">
-					<div class="box">
-						<div class="box-img">
+				<div className="obj">
+					<div className="box">
+						<div className="box-img">
 							<img src={Hourglass} alt="hourglass"/>
 						</div>
-						<div class="text">
+						<div className="text">
 							<p>Pick out and invest in upcoming crypto stars and market leaders</p>
 						</div>
 					</div>
-					<div class="box">
-						<div class="box-img">
+					<div className="box">
+						<div className="box-img">
 							<img src={Safe} alt="hourglass"/>
 						</div>
-						<div class="text">
+						<div className="text">
 							<p>Outperform Bitcoin returns</p>
 						</div>
 					</div>

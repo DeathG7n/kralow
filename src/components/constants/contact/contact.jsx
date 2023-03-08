@@ -22,7 +22,7 @@ export default function Contact() {
             status: ''
         },
     
-        validationSchema: validationSchema,
+        // validationSchema: validationSchema,
     
         onSubmit: (values) => {
             values.type = type
@@ -33,6 +33,7 @@ export default function Contact() {
 
     const sendEmail = async(e) => {
         e.preventDefault();
+        console.log("click")
     
         await emailjs.sendForm('service_5e8x3bq', 'template_g36t1nt', form.current, 'FujH57pnokLdaPoI1')
           .then((result) => {
@@ -42,8 +43,6 @@ export default function Contact() {
               console.log(error.text);
           });
     };
-
-    console.log(values)
   return (
     <Container>
         <div id="feedback">
@@ -120,12 +119,12 @@ export default function Contact() {
                             <option value="country" default>Country</option>
                             {countries?.map((r, id)=>{
                                 return(
-                                    <option value={r}>{r}</option>
+                                    <option value={r} key={id}>{r}</option>
                                 )
                             })}
                         </select>
                         {touched?.country && <ErrorText>{errors?.country}</ErrorText>}
-                        {type === 'investor' && <div class="btns">
+                        {type === 'investor' && <div className="btns">
                             <div onClick={()=>handleStatus("accredited")} style={{backgroundColor: status === "accredited"? "#fdeab9" : "transparent", color: status === "accredited" ? "#000" : "#fff"}}>Accredited</div>
                             <div onClick={()=>handleStatus("non-accredited")} style={{backgroundColor: status === "non-accredited" ? "#fdeab9" : "transparent", color: status === "non-accredited" ? "#000" : "#fff"}}>Non-accredited</div>
 					    </div>}
@@ -167,6 +166,7 @@ export default function Contact() {
                             id='agreeTerms'
                             onChange={handleChange}
                             onBlur={handleBlur}
+                            checked
                         />
                         <label htmlFor="agreeTerms">Agree to terms and conditions</label>
                     </div>
@@ -177,6 +177,7 @@ export default function Contact() {
                             id='agreePrivacy'
                             onChange={handleChange}
                             onBlur={handleBlur}
+                            checked
                         />
                         <label htmlFor="agreePrivacy">Agree to privacy policy</label>
                     </div>

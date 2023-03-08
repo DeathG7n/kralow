@@ -9,7 +9,7 @@ export default function Work() {
 				<p>For investors</p>
 				<h2>We allocate funds to promising early stage crypto projects, nurture them (if required), wait for the token to be listed, and slowly exit over time making hefty returns.
 				</h2>
-				<div class="work">
+				<div className="work">
 					<div>
 						<p>Minimum cheque</p>
 						<p>Tenure</p>
@@ -46,7 +46,7 @@ export default function Work() {
 						<p>30% from profit.</p>
 					</div>
 				</div>
-				<div class="btn"> 
+				<div className="btn"> 
 					<a href="#feedback"> Contact Us </a>
 				</div>
 			</div>
